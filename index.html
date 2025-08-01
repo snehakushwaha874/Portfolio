@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #6a0dad, #9b30ff, #6a0dad);
+        }
+
+        .profile-pic-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+            border: 2px solid white;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            border: 2px solid white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .contact-grid,
+        .skills-grid,
+        .projects-grid,
+        .achievements-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .contact-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .projects-grid,
+        .achievements-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid white;
+            backdrop-filter: blur(6px);
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 160px;
+            background: rgba(255, 255, 255, 0.15);
+            margin-bottom: 12px;
+        }
+
+        .skill-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slider {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .slider .card a {
+            display: inline-block;
+            color: white;
+            margin-top: 10px;
+            text-decoration: underline;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .slider {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .contact-grid,
+            .skills-grid,
+            .projects-grid,
+            .achievements-grid,
+            .slider {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <section class="center">
+        <img src="sneha.jpeg" alt="Sneha Kushwaha" class="profile-pic-img" />
+        <h1>Sneha Kushwaha</h1>
+    </section>
+
+    <section>
+        <h2>📬 Let's Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="card">
+                <a href="https://github.com/snehakushwaha874" target="_blank" style="color:white; text-decoration:none">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub Icon"
+                        style="vertical-align:middle; margin-right:8px;" />
+                    GitHub
+                </a>
+            </div>
+            <div class="card"><a href="mailto:kushwahasneha874@gmail.com" style="color:white; text-decoration:none">✉️
+                    GMail</a></div>
+            <div class="card"><a href="https://www.linkedin.com/in/snehakushwaha874" target="_blank"
+                    style="color:white; text-decoration:none">🔗 LinkedIn</a></div>
+            <div class="card"><a href="https://www.snapchat.com/add/cutie.patuti" target="_blank"
+                    style="color:white; text-decoration:none">👻 Snapchat</a></div>
+            <div class="card"><a href="https://cuvette.tech/app/student/profile/687b091d92c47e237131c352"
+                    target="_blank" style="color:white; text-decoration:none">🧑‍💻 Cuvette</a></div>
+            <div class="card"><a href="https://www.credly.com/users/kushwahasneha" target="_blank"
+                    style="color:white; text-decoration:none">🎖️ Credly</a></div>
+        </div>
+    </section>
+
+
+    <section>
+        <h2>🛠️ Skill Set</h2>
+        <div class="card">
+            <div class="skills-grid">
+                <div class="skill-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        class="skill-icon" />Python</div>
+                <div class="skill-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                        class="skill-icon" />SQL</div>
+                <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/power-bi.png"
+                        class="skill-icon" />Power BI</div>
+                <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png"
+                        class="skill-icon" />Excel</div>
+                <div class="skill-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        class="skill-icon" />PostgreSQL</div>
+                <div class="skill-item"><img src="https://fastapi.tiangolo.com/img/icon-white.svg"
+                        class="skill-icon" />FastAPI</div>
+                <div class="skill-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        class="skill-icon" />React</div>
+                <div class="skill-item"><img src="https://img.icons8.com/color/48/000000/tailwindcss.png"
+                        class="skill-icon" />Tailwind CSS</div>
+                <div class="skill-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                        class="skill-icon" />Git</div>
+                <div class="skill-item"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                        class="skill-icon" />C++</div>
+                <div class="skill-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/speech-bubble.png"
+                        class="skill-icon" />Communication</div>
+                <div class="skill-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/leader.png"
+                        class="skill-icon" />Leadership</div>
+                <div class="skill-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/microphone.png"
+                        class="skill-icon" />Public Speaking</div>
+                <div class="skill-item"><img src="https://img.icons8.com/ios-filled/50/ffffff/idea.png"
+                        class="skill-icon" />Problem Solving</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🚀 Projects</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <img src="volt ai.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <h3>Volt AI – Voice Assistant</h3>
+                <p>Voice-powered assistant using Python, FastAPI, and React with a JARVIS-style UI.</p>
+                <a href="https://github.com/snehakushwaha874/VoltAI" style="color: white">GitHub</a>
+            </div>
+            <div class="card">
+                <img src="Screenshot 2025-07-31 171351.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <h3>Credit Card Sales Dashboard</h3>
+                <p>Power BI dashboard analyzing credit card sales, user segments, and purchase patterns.</p>
+                <a href="https://github.com/snehakushwaha874/CreditCardSalesAnalysis" style="color: white">GitHub</a>
+            </div>
+            <div class="card">
+                <img src="power bi.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <h3>Store Sales Dashboard</h3>
+                <p>Retail sales visualization using Power BI to show trends and product performance.</p>
+                <a href="https://github.com/snehakushwaha874/PowerBI-Sales-Dashboard" style="color: white">GitHub</a>
+            </div>
+            <div class="card">
+                <img src="Data Analyser.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <h3>Data Analyzer</h3>
+                <p>Analyzed large-scale CSV data using Python and SQL to extract insights.</p>
+                <a href="https://github.com/snehakushwaha874/DataAnalyzer" style="color: white">GitHub</a>
+            </div>
+            <div class="card">
+                <img src="India in focus.jpg" alt="Sneha Kushwaha" class="image-placeholder" />
+                <h3>India in Focus</h3>
+                <p>A dashboard visualizing key metrics about India's economy and demographics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📜 Certifications</h2>
+        <div class="slider">
+            <div class="card">
+                <img src="SRWE.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>CCNA : Switching, Routing, and Wireless Essentials</p>
+                <a href="https://www.credly.com/badges/c24b42a7-5299-489b-a877-ae2c7a2f3cb8/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="ENSA.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>CCNA : Enterprise Networking, Security, and Automation</p>
+                <a href="https://www.credly.com/badges/a8beefc4-1658-402e-9b82-746b2d74d776/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="ITN.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>CCNA : Introduction to Networks</p>
+                <a href="https://www.credly.com/badges/adfc3244-04cd-4f0e-8746-5eeeb957b746/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="PE1.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>Cisco : Python Essentials 1</p>
+                <a href="https://www.credly.com/badges/59fa0090-823c-417e-931d-b26a5428dae9/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="PE2.jpg" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>Cisco : Python Essentials 2</p>
+                <a href="https://www.credly.com/badges/0296bde1-c5c7-4c20-aed4-110def769b94/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="ITC.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>Cisco : Introduction to Cybersecurity</p>
+                <a href="https://www.credly.com/badges/b27016d6-860e-44a4-bc5d-bbab57446de3/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="CE.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>Cisco : Cybersecurity Essentials</p>
+                <a href="https://www.credly.com/badges/232df763-0f7f-4dc2-95e2-25db54c6f9b8/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="PMF.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>IBM Project Management Fundamentals</p>
+                <a href="https://www.credly.com/badges/a0073242-661a-48f2-84f6-2c55202304eb/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="WDF.jpg" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>IBM Web Development Fundamentals</p>
+                <a href="https://www.credly.com/badges/d2788023-66e7-4968-bcfc-88cd000936ef/public_url"
+                    target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="TCS.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>TCS Communication Skills</p>
+                <a href="https://www.credly.com/badges/..." target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="MAF.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>Microsoft Azure Fundamentals</p>
+                <a href="https://www.credly.com/badges/..." target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <img src="EXCEL.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <p>Fundamentals of Excel</p>
+                <a href="https://www.credly.com/badges/..." target="_blank">View Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🏆 Achievements</h2>
+        <div class="achievements-grid">
+            <div class="card">
+                <img src="IEEE.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <h3>IEEE Vice Chair</h3>
+                <p>Led student technical activities and collaborations under IEEE student branch.</p>
+            </div>
+            <div class="card">
+                <img src="SIH.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <h3>Smart India Hackathon</h3>
+                <p>Selected for SIH 2022 for building a national-level innovation solution.</p>
+            </div>
+            <div class="card">
+                <img src="GC.png" alt="Sneha Kushwaha" class="image-placeholder" />
+                <h3>Google Cloud Boost - Diamond League</h3>
+                <p>Achieved Diamond League in Google Cloud career readiness program.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
