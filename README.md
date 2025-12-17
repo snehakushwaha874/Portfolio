@@ -11,7 +11,7 @@ A vibrant and fully responsive personal portfolio website built with HTML and CS
 - 💬 Clean layout using semantic HTML & custom CSS (no frameworks)
 
 ## 💻 Live Demo
-🔗 [Visit My Portfolio](https://yourusername.github.io/your-repo-name)
+🔗 [Visit My Portfolio](https://portfolio-sneha-kushwaha.vercel.app/)
 
 ## 🛠 Tech Stack
 - HTML5
